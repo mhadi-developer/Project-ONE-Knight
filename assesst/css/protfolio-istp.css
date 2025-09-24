@@ -1,0 +1,115 @@
+
+:root{
+    --main-theme-color:#009961;
+    --shadow:0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if there's extra height */
+  width: 100%;
+  margin: 0 auto; 
+  padding: 0;         /* center inside parent */
+}
+
+.grid-item {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background: white;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s ease;
+}
+
+/* Overlay section */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.805);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+
+/* Content inside overlay */
+.overlay-content {
+  text-align: center;
+  color: black;
+  padding: 15px;
+}
+
+.overlay-content .title {
+  font-size: 18px;
+  margin: 0 0 5px;
+  font-weight: 700;
+}
+
+/* .overlay-content .teacher {
+  font-size: 14px;
+  margin: 0 0 10px;
+  opacity: 0.9;
+} */
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.icons .icon {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  background: rgba(255,255,255,0.2);
+  padding: 10px 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icons .icon:hover {
+  background-color: var(--main-theme-color);
+  color: white;
+  transition: color 0.5s ease;
+}
+
+/* Hover effect */
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.filters button{
+  border-radius: 50px;
+  border-color: transparent;
+  margin-right: 0.5rem;
+}
+.filters button:hover{
+  background-color: var(--main-theme-color);
+  color: white;
+  border-color: var(--main-theme-color);
+}

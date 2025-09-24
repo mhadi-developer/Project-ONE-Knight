@@ -1,0 +1,280 @@
+header{
+    background-image: url(../img/banners/portfolio-page-bg.webp);
+    position: relative;
+    height: 80vh;
+}
+header::before{
+        content: "";
+    background-color: 
+ color-mix(in srgb,#060606, transparent 35%);
+    position: absolute;
+    inset: 0;
+}
+
+/* Hero text */
+.hero-overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+}
+
+.hero-overlay-text h1 {
+  font-size: 2rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+
+/* Extra small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  .hero-overlay-text{
+    top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+  }
+}
+
+/* Small devices (phones, ≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-overlay-text{
+    top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+  }
+
+}
+
+/* Medium devices (tablets, ≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-overlay-text{
+    top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+  }
+}
+
+/* Large devices (desktops, ≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero-overlay-text{
+    top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+  }
+}
+
+/* Extra large devices (large desktops, ≥1200px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .hero-overlay-text{
+    top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+  }
+}
+
+/* Extra extra large devices (larger screens, ≥1400px) */
+@media (min-width: 1400px) {
+  .hero-overlay-text{
+    top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3; /* above overlay */
+  }
+}
+  /* **************************************************************MAIN********************************************** */
+
+  /* ****product-slider********* */
+  .carousel-item img{
+    width: 100%;
+  }
+
+
+/* Hide prev/next by default */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: auto;
+}
+
+/* Show them on hover */
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* Position controls in the vertical middle */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Remove Bootstrap’s default icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom arrows */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.carousel-control-prev-icon::after {
+  transform: rotate(-135deg);
+}
+
+.carousel-control-next-icon::after {
+  transform: rotate(45deg);
+}
+
+/* Hover state = green background + white arrows */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: var(--main-theme-color);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon::after,
+.carousel-control-next:hover .carousel-control-next-icon::after {
+  border-color: white;
+}
+
+
+
+.carousel-indicators .active{
+   background-color: var(--main-theme-color);
+   transition: all 0.5s ease;
+}
+
+/* *****************protfolio discription*************** */
+.avatar div img{
+    width: 90px;
+    border-radius: 50px;
+    border: 6px solid var(--background-color);
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.testominial-item{
+    padding: 30px 30px 0 30px;
+    position: relative;
+    background: 
+ color-mix(in srgb, #060606, transparent 97%);
+    margin-bottom: 50px;
+}
+.testominial-item i{
+    color: var(--main-theme-color);
+}
+
+
+.section-heading h5{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1em;
+}
+
+.project-info-list{
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.project-info-list li{
+    margin-block: 1rem;
+}
+.project-info-list li h6{
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.project-info-list li p{
+    padding: 0;
+    margin: 0;
+    color: rgba(128, 128, 128, 0.822);
+}
+.project-info-list li a{
+    text-decoration: none;
+    color: var(--main-theme-color);
+}
+.project-info-list li a:hover{
+    color: var(--main-theme-color);
+    transition: all 0.3s ease;
+}
+/* *********************************footer************************************* */
+.footer-wrapper{
+  color: white;
+  background-color: black;
+}
+.footer-links-wrapper ul{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer-links-wrapper ul li a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--main-theme-color);
+  transition: all 0.5s ease;
+}
+.footer-links-wrapper ul li a:hover {
+  color: white;
+  background-color: #009961b8;
+  transition: all 0.5s ease;
+}
+.footer-btn{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
