@@ -1,27 +1,24 @@
-// Initialize Isotope
-const grid = document.querySelector('.grid');
-const iso = new Isotope(grid, {
-  itemSelector: '.grid-item',
-  layoutMode: 'masonry',
-  percentPosition: true
-});
+$(document).ready(function() {
 
-// Relayout after images load
-imagesLoaded(grid, () => {
-  iso.layout();
-});
+  var counters = $(".counter-card .count");
+  var countersQuantity = counters.length;
+  var counter = [];
 
-// Filter buttons
-document.querySelectorAll('.filters button').forEach(button => {
-  button.addEventListener('click', () => {
-    const filterValue = button.getAttribute('data-filter');
-    iso.arrange({ filter: filterValue });
-  });
-});
+  for (i = 0; i < countersQuantity; i++) {
+    counter[i] = parseInt(counters[i].innerHTML);
+  }
 
-// Initialize LightGallery (only target zoom icons)
-lightGallery(document.getElementById('lightgallery'), {
-  selector: '.icons .icon[href*="picsum"]',
-  plugins: [lgZoom, lgThumbnail],
-  speed: 400
+  var count = function(start, value, id) {
+    var localStart = start;
+    setInterval(function() {
+      if (localStart < value) {
+        localStart++;
+        counters[id].innerHTML = localStart;
+      }
+    }, 40);
+  }
+
+  for (j = 0; j < countersQuantity; j++) {
+    count(0, counter[j], j);
+  }
 });

@@ -22,5 +22,5 @@ document.querySelectorAll('.filters button').forEach(button => {
 // Initialize LightGallery
 lightGallery(document.getElementById('lightgallery'), {
   plugins: [lgZoom, lgThumbnail],
-  speed: 400
+  speed: 500
 });
