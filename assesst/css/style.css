@@ -2,7 +2,9 @@
     --main-theme-color:#009961;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /* ********************************************* main hero section ****************************************************** */
 .main-hero {
   height: 100vh; /* full screen height by default */
@@ -521,6 +523,7 @@ section.blogs{
   border-radius: 12px;
   border: 1px solid lightgrey;
   background-color: white;
+  margin-block: 1rem;
  
 }
 .blog-card:hover{
