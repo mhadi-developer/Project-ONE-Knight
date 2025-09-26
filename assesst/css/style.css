@@ -1,6 +1,6 @@
 :root{
     --main-theme-color:#009961;
-    --shadow:0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);;
 }
 
 /* ********************************************* main hero section ****************************************************** */
@@ -390,6 +390,7 @@ section.call-to-action{
     position: absolute;
     inset: 0;
     z-index: 2;
+    height: 100%;
 
 }
 .stats-heading h4{
@@ -433,12 +434,14 @@ section.call-to-action{
   border-radius: 10px;
   position: relative;
   margin-block: 1rem;
+  transition: all 0.5s ease;
 }
+
 .price-card-price h5{
   color: black;
     font-size: 42px;
     font-weight: 500;
-    transition: all 0.5s ease;
+    transition: all 0.3s linear;
 }
 .price-card-price h5 sub{
   font-size: 18px;
@@ -459,8 +462,9 @@ section.call-to-action{
   color: lightgray;
 }
 .price-card:hover{
-  box-shadow: var(--shadow);
-  transition: all 0.5s ease;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+  transition: all 0.3s linear;
 }
 .price-card:hover .price-card-price h5{
   color: var(--main-theme-color);
@@ -503,4 +507,53 @@ section.call-to-action{
 }
 .accordion-button:focus{
   box-shadow: var(--main-theme-color);
+}
+/* ****************************Blogs********************************* */
+section.blogs{
+  background-color: lightgrey;
+}
+.blog-content{
+  border-top: 0;
+  padding: 30px;
+}
+.blog-card{
+  transition: all 0.3s linear;
+  border-radius: 12px;
+  border: 1px solid lightgrey;
+  background-color: white;
+ 
+}
+.blog-card:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+  transition: all 0.3s linear;
+}
+.blog-card:hover a,.author-name{
+  color: var(--main-theme-color);
+  transition: all 0.3s linear;
+}
+
+.blog-card img{
+  width: 100%;
+}
+.blog-profile .blog-profile-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.blog-profile .blog-profile-img div img{
+  width: 100%;
+}
+.blog-profile{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.blog-tittle h5 a{
+  text-decoration: none;
+  color: #060606;
+}
+.blog-catagory h5 {
+  color: lightgray;
 }

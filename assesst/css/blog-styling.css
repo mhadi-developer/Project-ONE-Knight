@@ -1,0 +1,233 @@
+
+
+:root{
+    --main-theme-color:#009961;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);;
+}
+
+body{
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+/* *************************************************************************************************************************** */
+main{
+    background-color: rgb(211, 211, 211);
+}
+.blog-content-wrapper{
+    background-color: white;
+    padding: 30px;
+}
+.blog-content-wrapper .col-lg-8{
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-radius: 20px
+}
+.blog-img{
+    overflow: hidden;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.meta-links ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    color: rgba(128, 128, 128, 0.781);
+}
+.blog-details blockquote{
+    overflow: hidden;
+    background-color: 
+ color-mix(in srgb, black, transparent 95%);
+    padding: 60px;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+.blog-details blockquote p{
+    font-size: 2rem;
+    font-weight: 650;
+}
+.blog-details blockquote::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--main-theme-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.blog-sub-img div img{
+    width: 100%;
+    display: block;
+}
+.widget-container{
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 60px 0 30px 0;
+    box-shadow: var(--shadow);
+    transform: translateY(-10px);
+}
+.search-area h2{
+    color: #009961;
+}
+.search-box {
+  position: relative;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 40px 10px 12px; /* space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--main-theme-color);
+  box-shadow:(var(--shadow));
+  transform: translateY(-1px);
+}
+
+.search-box i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none; /* keeps the input clickable */
+}
+
+@media (max-width: 500px) {
+  .search-box input {
+    font-size: 14px;
+    padding: 8px 36px 8px 10px;
+  }
+}
+
+.catagory-area h2{
+    color: var(--main-theme-color);
+}
+.catagories-list ul{
+    list-style: none;
+    color: rgba(128, 128, 128, 0.736);
+}
+.catagories-list ul li{
+    margin-block: 1rem;
+}
+.catagories-list ul li a{
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    color: black;
+}
+.catagories-list ul li a:hover{
+    border-color: var(--main-theme-color);
+    color: var(--main-theme-color);
+    transition: all 0.3s ease;
+}
+.recent-post h3{
+    color: #009961;
+}
+.post-list .post-img{
+    width: 100px;
+    height: 100px;
+}
+
+.post-list .post-img img{
+    width: 100%;
+}
+.post-list ul{
+    list-style: none;
+}
+.post-list ul li{
+    display: flex;
+    gap: 1rem;
+    margin-block: 1rem;
+    color: rgba(128, 128, 128, 0.726);
+}
+.post-list ul li a{
+    text-decoration: none;
+    color: black;
+}
+.post-list ul li a:hover{
+    color: var(--main-theme-color);
+    transform: all 0.3s ease;
+}
+
+
+.comments-count h3{
+ color: var(--main-theme-color);
+}
+
+.display{
+    display: flex !important;
+    gap: 1rem;
+    background-color: white;
+}
+.comment-img div{
+    width: 60px;
+}
+.comment-img img{
+    width: 100%;
+}
+.margin{
+    margin-block: 1rem;
+}
+.post-comment-card{
+    padding: 30px;
+    border-radius:8px;
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+.post-comment{
+    background-color: white;
+}
+.post-comment-card h3{
+    color: var(--main-theme-color);
+}
+input{
+    background-color: var(--surface-color);
+    color: var(--default-color);
+    border: 1px solid
+ color-mix(in srgb, black, transparent 70%);
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-block: 1rem;
+}
+input:focus{
+    border-color: var(--main-theme-color);
+}
+.textarea-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  height: 100%;
+  resize: none; /* disable manual resize if you want full control */
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.textarea-wrapper textarea:focus {
+  border-color: var(--main-theme-color);
+  box-shadow: 0 0 4px rgba(79, 70, 229, 0.4);
+  outline: none;
+}

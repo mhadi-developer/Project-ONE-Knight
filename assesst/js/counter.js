@@ -1,24 +1,36 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
   var counters = $(".counter-card .count");
-  var countersQuantity = counters.length;
-  var counter = [];
+  var started = false; // to make sure it runs only once
 
-  for (i = 0; i < countersQuantity; i++) {
-    counter[i] = parseInt(counters[i].innerHTML);
+  function startCounting() {
+    counters.each(function () {
+      var $this = $(this);
+      var target = parseInt($this.text(), 10);
+      var current = 0;
+      var increment = Math.ceil(target / 100); // adjust speed
+      var interval = setInterval(function () {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(interval);
+        }
+        $this.text(current);
+      }, 40);
+    });
   }
 
-  var count = function(start, value, id) {
-    var localStart = start;
-    setInterval(function() {
-      if (localStart < value) {
-        localStart++;
-        counters[id].innerHTML = localStart;
-      }
-    }, 40);
+  function isInViewport(elem) {
+    var elementTop = $(elem).offset().top;
+    var elementBottom = elementTop + $(elem).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
   }
 
-  for (j = 0; j < countersQuantity; j++) {
-    count(0, counter[j], j);
-  }
+  $(window).on("scroll load", function () {
+    if (!started && isInViewport($(".stats-counter"))) {
+      started = true;
+      startCounting();
+    }
+  });
 });
