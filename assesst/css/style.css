@@ -2,7 +2,10 @@
     --main-theme-color:#009961;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);;
 }
-
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 /* ********************************************* main hero section ****************************************************** */
 .main-hero {
   height: 100vh; /* full screen height by default */
@@ -434,7 +437,7 @@ section.call-to-action{
   border-radius: 10px;
   position: relative;
   margin-block: 1rem;
-  transition: all 0.5s ease;
+  transition: all .3s ease;
 }
 
 .price-card-price h5{
@@ -468,7 +471,7 @@ section.call-to-action{
 }
 .price-card:hover .price-card-price h5{
   color: var(--main-theme-color);
-  transition: all o.5s ease;
+  transition: all 0.5s ease;
 }
 
 .recommended-badge{
@@ -521,6 +524,7 @@ section.blogs{
   border-radius: 12px;
   border: 1px solid lightgrey;
   background-color: white;
+  margin-block: 1rem;
  
 }
 .blog-card:hover{
@@ -557,3 +561,127 @@ section.blogs{
 .blog-catagory h5 {
   color: lightgray;
 }
+/* ********************************contact**************************** */
+ul.contact-list{
+  list-style: none;
+}
+.contact-list li{
+  display: flex;
+  gap: 0.8rem;
+  transition: all 0.3s ease-in-out;
+  margin-block: 1rem;
+}
+.contact-list li:hover i{
+  background-color: var(--main-theme-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.contact-list i{
+ font-size: 1em;
+ background-color: color-mix(in srgb, var(--main-theme-color), transparent 85%);;
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+ align-content: center;
+ color: var(--main-theme-color);
+}
+.contact-list li a{
+  text-decoration: none;
+  color: black;
+}
+.contact-list li:hover a{
+  color: var(--main-theme-color);
+  transition: all 0.3s ease-in;
+}
+
+/* *************************contact form********************* */
+.contact-form input{
+  
+    background-color: white;
+    color: var(--main-theme-color);
+    border: 1px solid lightgray;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-block: 1rem;
+    outline: none;
+}
+.contact-form input:focus{
+  border: 1px solid var(--main-theme-color);
+}
+.contact-form{
+  box-shadow: var(--shadow);
+  transform: translateY(-40px);
+  border-radius: 30px;
+}
+
+.contact-form .textarea-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contact-form .textarea-wrapper textarea {
+  width: 100%;
+  height: 100%;
+  resize: none; /* disable manual resize if you want full control */
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form .textarea-wrapper textarea:focus {
+  border-color: var(--main-theme-color);
+  box-shadow: 0 0 4px rgba(79, 70, 229, 0.4);
+  outline: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers items horizontally */
+}
+
+.form-button {
+  margin-top: 16px; /* add some space above the button */
+}
+
+
+/* ************************************************************FOOTER************************************************************* */
+.footer-wrapper{
+  color: white;
+  background-color: black;
+}
+.footer-links-wrapper ul{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer-links-wrapper ul li a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--main-theme-color);
+  transition: all 0.5s ease;
+}
+.footer-links-wrapper ul li a:hover {
+  color: white;
+  background-color: #009961b8;
+  transition: all 0.5s ease;
+}
+.footer-btn{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+/* ****************************************************************************************************************************** */

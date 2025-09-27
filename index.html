@@ -10,10 +10,28 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
     <link rel="stylesheet" href="assesst/css/style.css">
     <link rel="stylesheet" href="assesst/css/protfolio-istp.css">
+    <link rel="stylesheet" href="assesst/css/preloader.css">
 
     <title>KnightONE-designer Agency</title>
 </head>
 <body>
+
+ 
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <h1 id="logo-text">
+        <i class="fa-solid fa-chess-knight"></i> KnightOne
+      </h1>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your actual website content -->
+  <div class="page-content">
+    
  <header>
    <!-- Navbar -->
             <section class="main-nav">
@@ -468,10 +486,10 @@
                         </div>
 
                         <!-- Grid-items -->
-                        <div id="lightgallery" class="grid text-center">
+                        <div id="lightgallery" class="grid text-center" data-aos="fade" data-aos-duration="2000">
 
-                            <div class="grid-item card" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
-                            <img src="assesst/img/banners/isotop-card-1.jpg" alt="Nature 2">          
+                            <div class="grid-item card" data-lg-size="800-600">
+                            <img src="assesst/img/banners/isotop-card-1.jpg" alt="#">          
                  <!-- Overlay section -->
                             <div class="overlay">
                                 <div class="overlay-content">
@@ -489,7 +507,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item card" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item card" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-card-2.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -508,7 +526,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item card" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item card" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-card-3.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -527,7 +545,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item app" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item app" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-app-1.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -546,7 +564,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item app" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item app" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-app-2.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -565,7 +583,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item app" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item app" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-app-3.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -584,7 +602,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item web" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item web" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-web-1.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -603,7 +621,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item web" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item web" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-web-2.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -622,7 +640,7 @@
                             </div>
                             </div>
 
-                             <div class="grid-item web" data-lg-size="800-600" data-aos="fade-up"  data-aos-duration="3000">
+                             <div class="grid-item web" data-lg-size="800-600">
                             <img src="assesst/img/banners/isotop-web-3.jpg" alt="Nature 2">          
                  <!-- Overlay section -->
                             <div class="overlay">
@@ -922,8 +940,120 @@
       </div>
     </section> <!-- /.blogs -->
 
+    <section class="contacts my-2" id="contact">
+      <div class="container">
+        <div class="contact-wrapper py-5">
+          <div class="section-heading">
+            <h3>Contact</h3>
+          </div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <div class="row">
+            <div class="col-lg-4">
+                <div class="contacct-info-wrapper py-3">
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="contact-deatils">
+                              <h5>Address</h5>
+                              <p>A108 Adam Street, New York, NY 53502</p>
+                            </div>
+                        </li>
+
+                          <li>
+                           <i class="fa-solid fa-phone"></i>
+                            <div class="contact-deatils">
+                              <h5>Call Us</h5>
+                              <p><a href="tel:+0123456789">+0123456789</a></p>
+                            </div>
+                        </li>
+
+                            <li>
+                        <i class="fa-solid fa-envelope"></i>
+                            <div class="contact-deatils">
+                              <h5>Call Us</h5>
+                              <p><a href="mailto:info@example">info@example</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="contact-form py-2 px-5">
+                    <form>
+                        <div class="row my-3" >
+                           <div class="col-md-6">
+                               <input type="text" placeholder="Your Name">
+                           </div>
+                           <div class="col-md-6">
+                             <input type="email" placeholder="Your Email">
+                           </div>
+                           <div class="col-md-12">
+                             <input type="text" placeholder="Subject">
+                           </div>
+                           <div class="col-md-12">
+                                <div class="textarea-wrapper">
+                                    <textarea placeholder="Type your text here..." rows="7"></textarea>
+                            </div>   
+                        </div>
+                        </div>
+                         <div class="form-button">
+                        <a href="#home" class="btn btn-custom">Send Message</a>
+                         </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
  </main>
-       
+
+ 
+<footer>
+     <div class="footer-wrapper py-5">
+        <div class="container text-center">
+            <div class="footer-heading my-4">
+               <h2><i class="fa-solid fa-chess-knight"></i>KnightOne</h2>
+            </div>
+            <P class="mb-4">Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</P>
+            <div class="footer-links-wrapper">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="index.html">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-brands fa-skype"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-brands fa-square-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+              <div class="footer-btn">
+        <a href="#" class="btn btn-custom"><i class="fa-solid fa-arrow-up"></i></a>
+     </div>
+        </div>
+     </div>
+   </footer> 
+  </div>
+
     
 <!-- bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -944,7 +1074,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!--Aos  cdn-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+<script src="assesst/js/preloader.js"></script>
 <script src="assesst/js/counter.js"></script>
 <script src="assesst/js/isotop.js"></script>
 <script>
